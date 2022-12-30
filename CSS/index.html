@@ -4,19 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>css grid</title>
+    <title>css-grid</title>
     <style>
-        .container{
-            display:grid;
-            grid-gap:1rem;
-            grid-template-columns:repeat(auto-fit , minmax(400px , 1fr)); /*item ki width agar minimum 400 honelagi to wo wrap honne lagega aur maximum 1fr hosakti hai */
+     .container{
+        display:grid;
+        grid-template-columns: repeat(5 , 1fr);
+        grid-template-rows: repeat(4 , 1fr);
+        grid-gap:1rem;
 
-        }
-        .box{
-            background-color:rgb(183, 183, 85);
-            border:2px solid black;
-            padding:30px;
-        }
+     }
+     .box{
+        background-color:goldenrod;
+        border:2px solid black;
+        padding:20px;
+     }
+     .box:first-child{
+        /* grid-column-start:1;
+        grid-column-end:3;
+        grid-row-start:1;
+        grid-row-end:4; */
+
+        /* shortcut for above lines  */
+
+        grid-column:1 / span 3;   /* teen dabbe span kardiye */
+        grid-row:1 / span 3;      /* teen row span kardiye */
+        
+     }
     </style>
 </head>
 <body>
@@ -30,6 +43,9 @@
         <div class="box">item-7</div>
         <div class="box">item-8</div>
         <div class="box">item-9</div>
+        <div class="box">item-10</div>
+        <div class="box">item-11</div>
+        <div class="box">item-12</div>
         <div class="box">item-10</div>
         <div class="box">item-11</div>
         <div class="box">item-12</div>
