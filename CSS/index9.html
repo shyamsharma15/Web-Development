@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and after Pseudo selector</title>
+    <style>
+        body{
+            margin:0px;
+            padding:0px;
+            background-color:black;
+            color:white;
+            /* background:url('images/gym.jpg') no-repeat center center/cover; */
+        }
+        header::before{
+            background:url('images/gym.jpg') no-repeat center center/cover ;
+             content:"";      /*  it is necessary */
+            position:absolute;   /*   jisse image aagye float naa ho  */
+            top:0;  /*   jisse faltu ki padding(space) naa aaye image mai  */
+            left:0;
+            width:100%;       /*  it is necessary */
+            height:100%;       /*  it is necessary */
+             z-index:-1;    /*  jisse image se content naa dhake  */
+             opacity:0.5;  /*   yea image ko light bna degi taaki acche se content visible ho   */        
+        }
+        .navigation{
+            display:flex;
+        }
+        li{
+            list-style:none;
+            padding:5px;
+        }
+        section::before{
+            content:"this is a before selector  content" ;
+        }
+        section::after{
+            content:"this is a after selecter content ";
+        }
+        section{
+            margin:5px 100px;
+            height:200px;
+            flex-direction:column;
+            border:2px solid red;
+            display:flex;
+            align-items:center;
+            justify-content: center;  
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li class="item">Home</li>
+                <li class="item">About</li>
+                <li class="item">Contact/us</li>
+                <li class="item">Sign/Up</li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h1>This is before and after pseudo sellector</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas ea corporis harum vero iste, eveniet cumque mollitia modi et blanditiis similique alias dolores molestiae quae suscipit tenetur consequuntur ullam ipsa consectetur ad quidem obcaecati sed accusantium? Eligendi nulla ad culpa?</p>
+    </section>
+    <hr>
+</body>
+</html>
