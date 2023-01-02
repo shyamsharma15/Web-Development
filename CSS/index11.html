@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .container {
+            height: 500px;
+            width: 100%;
+            border: 2px solid black;
+            /* Initialize the container as a flex box  */
+            display: flex;
+
+            /* Flex properties for a flex container */
+
+            /* flex-direction: row; */
+
+            /*
+            flex-direction:column;
+            flex-direction:row-reverse;
+            flex-direction:column-reverse; */
+
+            /* flex-wrap: wrap; */
+            /*by default iski value nowrap hoti hai  */
+
+            /* flex-flow:row-reverse wrap;  (isse do kaam ekk saath hote hai flex-direction and flex-wrap )*/
+
+
+            /*  yea justify content justify the content in horizontal direction(horizontally kaam karrega)  */
+            /*  justify-content:center; */
+            /*  justify-content:space-between; */
+            /*  justify-content:space-evenly; */
+            /*  justify-content:space-around;  */
+
+            /* justify the content in vertical direction*/
+            /*  align-items:center;      */
+            /*verticallly center mai aagyinge items */
+            /*  align-items:flex-end;    */
+            /*  align-items:flex-start;  */
+            /*   align-items:stretch;     */
+        }
+
+        .item {
+            width: 150px;
+            height: 200px;
+            padding: 2px;
+            margin: 10px;
+            border: 2px solid green;
+            background-color: tomato;
+        }
+        #item-1{
+            /* Flex properties for a flex item */
+            /* jitna jyada order ki value hogi wahi element last mai show hoga container mai  */
+            /* order:5; */
+            /* jitni jyada flex grow ki value dinge wo aur baaki items se jyada bda dikhega  */
+            /* flex-grow:2; */
+            /* jitni jyada flex shrink ki value dinge wo baaki items se jyada chota dikhega chota karne par  */
+            flex-shrink:2;
+
+        }
+        #item-2{
+            /* flex-grow:3; */
+            /* flex-shrink:3; */
+            /* when flex-derection:is set to row then flex-basis: will work on width */
+            /* when flex-direction : is set on column then flex-basis: will work on height */
+            flex-basis:300px;
+            
+
+        }
+        #item-3{
+            /* flex:4 4 350px; */  /* isme firstvalue - flex-grow hai,second-value:flex-shrink hai,aur third value:flex-basis hai */
+            align-self:flex-end;     /* isse particular item flex ke end mai challa jaayega */
+            /* align-self:center; */      /*  aur isse particular item center mai aagyega  */
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1> This is my Flexbox </h1>
+    <div class="container">
+        <div class="item" id="item-1">First Box</div>
+        <div class="item" id="item-2">Second Box</div>
+        <div class="item" id="item-3">Third Box</div>
+    </div>
+</body>
+
+</html>
