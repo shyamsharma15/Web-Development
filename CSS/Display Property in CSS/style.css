@@ -1,0 +1,24 @@
+*{
+    /* border:1px solid red; */
+    margin:0;
+    padding:0;
+    background-color:rgb(248, 162, 50);
+
+}
+li{
+     display:inline;  /* display:inline; will help to arrange more elements assembled in one row without taking more space */
+    padding:5px;
+}
+ul{
+    padding:10px;
+    color:brown;
+    background-color:black;
+    text-align:end;
+}
+nav ul li:hover{
+    padding:12px;
+    color:blueviolet;
+    background-color:rgb(196, 143, 74);
+    cursor:pointer;
+}
+
