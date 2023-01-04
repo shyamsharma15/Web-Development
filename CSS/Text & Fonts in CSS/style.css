@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+h1{
+    text-decoration:underline; 
+    text-decoration-style:wavy;
+    text-decoration-color:aqua;
+    text-shadow:2px 2px blue , 5px 5px orange;
+
+}
+a{
+    text-decoration-style:wavy;
+    text-decoration-color:green;
+}
+h2 , p{
+     font-family:sans-serif;
+     font-family: 'Silkscreen', cursive;
+}
