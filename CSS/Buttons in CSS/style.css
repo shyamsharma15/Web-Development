@@ -1,0 +1,38 @@
+.container{
+    border:2px solid red;
+    background-color:aqua;
+    padding:34px;
+    margin:34px auto;
+    width:666px;
+}
+a{
+    text-decoration:none;
+    color:black;
+}
+a:hover{
+    color:rgb(39, 24, 24);
+    background-color:white;
+}
+a:visited{
+    background-color:yellow;
+}
+a:active{
+    background-color:blue;
+}
+
+.btn{
+    font-weight:bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color:crimson;
+    padding:6px;
+    border:none;
+    cursor:pointer;
+    font-size:15px;
+    border-radius:4px;
+}
+.btn:hover{
+    color:blueviolet;
+    background-color:chartreuse;
+}
+
+
