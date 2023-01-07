@@ -1,0 +1,40 @@
+*{
+   box-sizing:border-box;
+}
+.item{
+    border:3px solid grey;
+    margin:12px 3px;
+    padding:12px 3px;
+    background-color:rgb(216, 71, 71);
+ }
+.container{
+    border:2px solid green;
+    width:50vw;
+    margin:33px auto; 
+    background-color:blueviolet;
+ }
+ #fruits{
+   float:left;
+   width:48%;
+
+ }
+ #computer{
+   float:left;
+   width:48%;
+
+ }
+ #stationary{
+    /* float:left; */
+    width:100%;
+    clear:left;
+ }
+ p , h3{
+   /* text-align:right;
+   text-align:left;
+   text-align:center; */
+   text-align:justify;
+ }
+ h1{
+   margin:auto;
+   width:50%;
+ }
