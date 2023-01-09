@@ -1,0 +1,22 @@
+main {
+    border: 2px solid brown;
+    border-radius:10px;
+      /* width :75%; */
+       width :50vw; 
+}
+body{
+    font-size:2em;
+}
+header {
+    font-size :2em;
+}
+
+section {
+    border :5px dashed hsl(120, 100%, 25%);
+    width : 50vw;
+    width:50vw;
+   
+     /* width:100%;  */
+}
+
+
