@@ -1,0 +1,41 @@
+body{
+    color:white;
+}
+.container{
+    width:300px;
+    height:600px;
+    background-color:grey;
+    margin:100px;
+}
+.box{
+    width:100px;
+    height:100px;
+}
+.red{
+    position:relative;
+    background-color:rgb(230, 10, 10);
+    left:100px;
+    top:0px;
+}
+.green{
+    background-color:green;
+    position:absolute;
+    bottom:0;
+    right:0;
+     z-index:3;
+}
+.blue{
+    background-color:blue;
+    position:fixed;
+    right:70px;
+    bottom:50px;
+    z-index:2;
+}
+.purple{
+    background-color:purple;
+    position:sticky;
+    top:100px;
+}
+.spacer{
+    height:300vh;
+}
