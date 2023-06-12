@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set in Javascript</title>
+    <script type="text/javascript">
+        // Set = sets are iterable , order of items are not guranteed , no index based access,set mai kissi bhi datatype ke elements ko store kar sakte hai  
+        // difference b/w Set and array :- set mai ekk hee element do baar nhi aata hai (no duplicates are stored in sets),
+        //                                   set mai index se access nhi kar sakte items ko lekin array mai kar sakte hai 
+
+        // how to create Set
+        const numbers = new Set([1,2,3,4,5]) // yahan parenthesis ke ander array daal diya set mai 
+        console.log(numbers);
+        console.log(numbers[3]); // yahan undefined aajyega kyunki set mai index se access nhi karsakte elements ko 
+
+        // adding items to Set
+        const numberse = new Set(); // yea empty set hai 
+        numberse.add(1);
+        numberse.add(2);
+        numberse.add(3);
+        numberse.add(4); // yahan duplicate number ekk baar hee store hoga 
+        numberse.add(4);
+        numberse.add(["items1","item2"]); // yea donno arrays mai same items hai phir bhi donno arrays add hodi set mai kyunki yea donno array memory alag alag jagah store hai 
+        numberse.add(["item1","item2"]);  
+        console.log(numberse);
+
+        for(let number of numberse) // Set ko iterate kar sakte hai for of loop lagakar 
+        {
+            console.log("items in our set are ",number);
+        }
+        // agar humko Set mai koi item find karna hai ti hum has method lagakar finf karlinge 
+        if(numberse.has(1))
+        {
+            console.log(" 1 is is present in Set ");
+        }else{
+            console.log("not present ");
+        }
+        // set kii help se array ke unique number of occurrences of items  ko  find karsakte hai 
+        const array = [1,2,3,3,4,2,5,5,1];
+        const uniqueElement = new Set(array);
+        console.log(uniqueElement);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
