@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Time Out Function</title>
+    <script type="text/javascript">
+        //setTimeout function :- input leta hai ekk function and ekk time interval ki kitni der baad iss function ko run karna hai. 
+        //javascript iss setTimeout func ko browser ko dega aur kahega ki jab tak mai baaki bachi hui file run kar rhi huun tab tak yea setTimeout func tum lelo aur itni der baad mujhe lota dena .
+        // Browser fir iss setTimeout ko callback queue mai dega aur event loop baar baar check karrega call stack ko ki wo free hua ki nhi .
+        // jab call stack free ho jaayega tab yea setTimeout function run hoga 
+
+        // example:1
+        //  console.log('Script start ');
+        //  function hello(){
+        //     console.log('inside hello function');
+        //  }
+        //  console.log("script end");
+        //  console.log(idOfsettimeout);
+
+         // example:2
+        //  console.log('Script start');
+        //  setTimeout(()=>{
+        //     console.log('inside setTimeout function')
+        //  },1000)
+        //  console.log('Script end');
+
+        // clearTimeout function :- yea input leta hai setTimeout func ki id aur stope kardeta hai setTimeout func kaa execution .
+
+         // example:3 :- setTimeout function humko id return karta hai jisse hum store karra sakte hai.
+         // jo setTimeout function id return karta hai agar hum uss id ko clearTimeout function mai pass kardinge to 
+         //setTimeout function run hona stop kardega aur wo browser mai se clear ho jaayega .
+         
+        //  console.log('Script start')
+        //  const setTimeFuncId = setTimeout(()=>{
+        //     console.log('inside setTimeout function ')
+        //  },1000)
+        //  console.log('set time out function id is ',setTimeFuncId);
+        //  console.log("clearing time out ");
+        //  clearTimeout(setTimeFuncId); // abb yahan setTimeout run nhi hoga kyunki wo browser se clear (khatam) hogya hai 
+        //  console.log("script end");
+
+
+         // setInterval function :- yea bhi same hota hai setTimeout function ke
+
+         console.log('Script start');
+         setTimeout(()=>{
+            console.log("inside set time out function ");
+         },2000)
+        console.log('Script ends ');
+
+
+
+
+    </script>
+</head>
+<body>
+    <h1>Set time out function</h1>
+    <p>Open the console to read the output of the code</p>
+</body>
+</html>
