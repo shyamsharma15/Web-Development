@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays in javascript</title>
+    <script type="text/javascript">
+        // Arrays :- arrays is an ordered collection of items (ordered collection matlab items proper index par rehte hai )
+        const arr = ["apple" , "mango" , "banana"];
+        console.log(arr);
+        console.log("length of my array is ",arr.length);
+        
+        // Array is an objects in javascript (toh humko pta kesse challega kii jo user nai banaya hai wo object hai yaa array hai to hum isArray kaa use karinge aur yea true yaa false return karrega )
+        let fruits = ["grapes" , "banana" , "papaya" , "orange"];
+        console.log(Array.isArray(fruits));
+
+        // Push and Pop operation in array :- (push and pop array ke last mai se elements ko add karte hai yaa remove karte hai )
+        let vegetables = ["potato" , "tomato" , "onion" , "ginger"];
+        vegetables.push("palak");
+        console.log(vegetables);
+        vegetables.pop();
+        console.log(vegetables);
+        const popedVegetable = vegetables.pop();
+        console.log("poped vegetable is ",popedVegetable);
+
+        // shift and unshift operations in arrays :- ( unshift array ke starting mai item ko add karti hai  )
+        //(unshift :- array ke starting walle item ko remove karta hai )
+       //(push and pop operations are faster then shift and unshift because shift and unshift array ke har ekk element ko pahelle aange shift karte hai fir starting walle element ko add yaa remove karte hai )
+       let fruits2 = ["papaya","mango","apple","strawberry"];
+       fruits2.unshift("banana");
+       console.log(fruits2);
+       fruits2.shift();
+       console.log(fruits2);
+
+       
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
