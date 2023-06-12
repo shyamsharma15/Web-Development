@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator in javascript</title>
+    <script type="text/javascript">
+        // object mai same keys nhi store hoti hai agar same kii present hai object mai to baad walli key hee bas store hogi
+      // example :-1
+      const person1 = {
+        name:"shyam",
+        age:21,
+        city:"navgrah colony",
+      }
+      const person2 = {
+        name:"tejasv",
+        gender:"male",
+      }
+      const newObject = {...person1,...person2}; // to yahan name key same hai donno mai to yea name ki value tejasv lelega kyunki yea spreadoperator mai baad mai likha hai person2
+      console.log(newObject);
+
+      // example : 1 :- example of spread operator
+      const obj1 = {
+        key1:"value1",
+        key2:"value2",
+
+      }
+      const obj2 = {
+        key3:"value3",
+        key4:"value4",
+      }
+      const newObj =  {...obj1 , ...obj2};
+      console.log(newObj);
+      // example:2
+
+      let myNewObj = {..."abcde"};
+      console.log(myNewObj);
+      
+
+    </script>
+</head>
+<body>
+    <h1> Spread Operator in object</h1>
+    <p>Please open the console to see the output of the code </p>
+</body>
+</html>
