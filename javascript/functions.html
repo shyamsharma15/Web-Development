@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions in javascript</title>
+    <script type="text/javascript">
+        // function declaration 
+        function findTarget(arr , targt)
+        {
+             for(let i = 0;i<arr.length;i++)
+             {
+                if(arr[i] === targt)
+                {
+                    return i;
+                }
+             }
+             return -1;
+        }
+        const ans = findTarget([1,2,3,4,5] , 3);
+        console.log(ans);
+
+        // function expression :- function ko variable mai store kar lette hai aur function ko name nhi dette isme 
+        // const isEven = function(number)
+        // {
+        //    return number % 2 === 0;
+        // }
+        // const answer = isEven(12);
+        // console.log(answer);
+
+        // Arrow function :- arrow function mai function keyword bhi nhi likhte hai hum  
+        // const isEven = (number) =>
+        // {
+        //     return number % 2 === 0;
+        // }
+        // const answer = isEven(11);
+        // console.log(answer);
+
+        // agar arrow function mai ekk hee parameter hai to parenthesis nhi bhi likho to koi dikkat nhi hai aur ekk hee line kaa code hai arrow function mai to curly braces bhi mat lagao koi dikkat nhi 
+        const isEven = number => number%2===0;
+        const answ = isEven(13);
+        console.log(answ);
+        
+        // finding the factorial of a number 
+
+        const fact = (numbers) =>
+        {
+            let total = 1;
+            for( let i = 1;i<=numbers;i++)
+            {
+                total = total*i;
+            }
+            return total;
+        }
+        const answe= fact(5);
+        console.log("factorial of 5 is ",answe);
+       
+        // default parameter
+        const add2num = (a,b=0) => a+b; // yahan b ko humne default parameter bana diya hai 
+        const anw = add2num(2,6);
+
+        console.log("the answer of adding two numberis ",anw);
+        
+        const restParam = (num1 , num2 , ...num3) =>
+        {
+            console.log(`the value of num1 is ${num1}`);
+            console.log(`the value of num2 is ${num2}`);
+            console.log(`the value of num3 is ${num3}`);
+        }
+        restParam(2,3,4,5,6,7,8,9);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
