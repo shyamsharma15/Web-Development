@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Promise in javascript </title>
+    <script type="text/javascript">
+        // promise :- promise create karne ke liye new keyword kaa use karte hai aur promise mai jo function banate hai usse executor function bolte hai jo execute karne kaa kaaam karta hai 
+        // aur yea executor function input mai two parameter leta hai resolve aur reject (yea donno resolve aur reject methods hoti hai yaa function bhi bol sakte hai)
+
+
+        // example:1:-
+
+        const bucket = ['coffee','vegetables','chips','salt','rice'];
+        // producing  promise 
+        const myPromise = new Promise((resolve,reject)=>{
+            if(bucket.includes('vegetables') && bucket.includes('salt')){
+                resolve("fried rice");
+            }else{
+                reject("could not do it ");
+            }
+        })
+
+        // how to consume promise :-hum .then method ki help se promise ko consume(use) kar sakte hai 
+        myPromise.then((myfriedRice)=>{ // yea 1st callback function jab challega jab mera promise resolve hojaayega tab .aur yea callback input lega wo value jo resolve mai humne di thi "fried rice"           console.log("lets eat ",myfriedRice);
+        },
+        (error)=>{// yea 2nd callback function jab challega jab mera promise reject ho jaayega . aur yea callback input mai lega wo reject walle method ki value "could not do it "
+            console.log(error);
+        })
+
+        // example:2:- hum catch kaa bhi use kar sakte hai 
+
+         const bucket1 = ['chips','potato','mango','orange'];
+         // producing promise 
+         const mypromise = new Promise((resolve,reject)=>{
+             if(bucket1.includes('chis') && bucket1.includes('mango')){
+                resolve("promise completed");
+             }else{
+                reject("promise not completed");
+             }
+         })
+
+         mypromise.then((value1)=>{ // jab promise resolve hogi tab .then challega 
+                console.log("hello guys my ",value1);
+            }).catch((error)=>{// jab promise reject hogi tab catch challega 
+            console.log(error);
+         })
+
+        
+
+    </script>
+</head>
+<body>
+    <h1>Promise in javascript</h1>
+    <p>please open the console to see the output of the code</p>
+</body>
+</html>
