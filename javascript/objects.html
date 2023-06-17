@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects in javascript</title>
+    <script type="text/javascript">
+        // objects in javascript :- objects bhi reference type hote hai aur memory mai array ke jesse hee store hotte hai 
+                                     // objects key value pairs ko store karte hai 
+                                     // object mai hum array ko store kar sakte hai 
+        const persone = {
+            name:"shyam",
+            age:20,
+            gender:"male",
+
+        }
+        console.log(persone);
+        console.log(persone.name);
+        console.log(persone.gender);
+
+        // hum array ko store kar sakte hai object mai 
+        let person1 = {
+             name:"tejasv",
+             age:21,
+             gender:"male",
+             hobbies:["playing" , "dancing" , "listening music"],
+             
+        }
+        console.log(person1);
+        person1.class = "college"; // yahan key value pair add kardiya humne
+        person1["city"] = "gwalior";  // yahan bhi key value pair add kardiya humne
+        console.log(person1);
+        console.log(person1["name"]); // yahan humne person1 ke key ko access karliye double quotes kaa use karke kyunki javascript mai object ki ket by default string mai hotti hai 
+        console.log(persone["name"]);
+          
+        // object ko iterate kesse karte hai 2 tareeke hai :- <1> for in loop <2> object.keys
+
+            const person2 = {
+                name:" Ritika ",
+                age: 20,
+                gender:"female",
+            }
+            person2.city = "gwalior";
+            console.log(person2);
+            for(perso in person2)
+            {
+                console.log(person2[perso]); // agar person2 ki keys ki values print karnai hai to essa karro 
+            }
+            for(perso in person2)
+            {
+                console.log(perso); // agar sirf person2 ki key print karna hai to essa karro 
+            }
+            for(perso in person2)
+            {
+                console.log(` ${perso} : ${person2[perso]}`); // agar purra key value pair print karna ahi to esse karro 
+            }
+
+            // object ko hum object.keys method se iterate kar sakte hai par yea keys kii array return karke deta hai phir hum usme for of loop lagake print karding jisse wo object hee bangyaa
+
+            console.log(Object.keys(person2)); // yea object kii keys kaa array return karta hai 
+
+            for(let key of Object.keys(person2)) // yea loop lagake humne key kii values print karra li 
+            {
+                console.log(person2[key]);
+            }
+
+           
+            
+            
+
+        
+
+    </script>
+</head>
+<body>
+    <h1>Objects in javascript</h1>
+    <p>Please open the Console to see the output of the code </p>
+</body>
+</html>
